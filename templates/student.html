@@ -1,0 +1,17 @@
+{% load render_table from django_tables2 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+
+<h3> Student<h3/>
+{% for data in Student %}
+{{ data }}<br>
+{% endfor %}
+<br>
+
+</body>
+</html>

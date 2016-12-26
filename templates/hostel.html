@@ -1,0 +1,17 @@
+{% load render_table from django_tables2 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hostel</title>
+</head>
+<body>
+<h3> Hostel <h3/>
+{% for data in Hostel %}
+{{ data }}<br>
+{% endfor %}
+<br>
+
+</body>
+</html>

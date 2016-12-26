@@ -1,0 +1,61 @@
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+
+<a href="hostel.html">Hostel</a>
+<a href="room.html">Room</a>
+<a href="student.html">Student</a>
+<a href="admin">Add</a>
+<br><br><br>
+
+Знайти студента:<br>
+<form action="add.html" method="post">
+    {% csrf_token %}
+     <input type="text" name="ID">
+    <input type="submit" name="Submit">
+    <form/>
+    <br>
+    Ви ввели {{ ID }}
+    <br>
+{{ our }}
+<br><br>
+    Найти общежите для студента
+    <form action="add.html" method="post">
+        {% csrf_token %}
+     <input type="text" name="faculty">
+    <input type="submit" name="Submit">
+
+
+    <form/>
+
+        {% for data in hostel %}
+        <br>{{ data }}
+        {% endfor %}
+
+<style>
+body {
+    color: cornsilk;
+    background-color: coral;
+    font-size: 40px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+</style>
+
+</body>
+
+</html>
